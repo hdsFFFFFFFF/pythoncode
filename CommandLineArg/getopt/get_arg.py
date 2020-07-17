@@ -25,8 +25,8 @@ def main(argv):
             inputfile = arg
         elif opt in ("-o", "--ofile"):
             outputfile = arg
-            print '输入的文件为：', inputfile
-            print '输出的文件为：', outputfile
+    print '输入的文件为：', inputfile
+    print '输出的文件为：', outputfile
 
 if __name__ == "__main__":
     main(sys.argv[1:])
