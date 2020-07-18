@@ -199,7 +199,7 @@ python的字符串列表有2种取值顺序：
 - 从右到左的索引是从-1开始的，最大范围是字符串开头
 - 下标为空表示从头取到尾
 
-![python-string-slice](/home/hds/github/pythoncode/img/python-string-slice.png)
+![python-string-slice](/img/python-string-slice.png)
 
 使用`[头下标:尾下标]`来从字符串中截取一段字符串。获取的字符串包含头下标的字符，但不包含尾下标的字符。比如：
 
@@ -211,11 +211,11 @@ python的字符串列表有2种取值顺序：
 'bcde'
 ```
 
-![o99aU](/home/hds/github/pythoncode/img/o99aU.png)
+![o99aU](/img/o99aU.png)
 
 python列表截取可以接收第3个参数，参数的作用是截取的步长。[1:4:2]表示在索引1到索引4的位置间，设置步长为2(间隔一个位置)来截取字符串。
 
-![python_list_slice_2](/home/hds/github/pythoncode/img/python_list_slice_2.png)
+![python_list_slice_2](/img/python_list_slice_2.png)
 
 
 
@@ -227,7 +227,7 @@ list(列表)是python中最频繁的数据类型。
 2. 列表可以完成大多数集合类的数据结构的实现
 3. 支持字符，数字，字符串，也可以包含列表(即嵌套)
 
-![list_slicing1](/home/hds/github/pythoncode/img/list_slicing1.png)
+![list_slicing1](/img/list_slicing1.png)
 
 #### python元组
 
