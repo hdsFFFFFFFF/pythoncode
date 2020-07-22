@@ -31,7 +31,67 @@ class ClassName:
     class_suite #类体
 ```
 
+类的帮助信息可以通过`ClassName._ _doc _ _` 查看
+
 class_suite由类成员，方法，数据属性组成。
 
 
 
+#### 实例
+
+以下是一个简单的python类的例子：
+
+```python
+#!/usr/bin/env python
+# coding=utf-8
+
+class Employee:
+    '所有员工的基类'
+    empCount = 0	#类变量
+    
+    def __init__(self, name, salary):	#构造函数
+        self.name = name
+        self.salary = salary
+        Employee.empCount += 1
+        
+    def displayCount(self):
+        print 'Total Employee %d' % Employee.empCount
+        
+    def displayEmployee(self):
+        print 'Name:', self.name. 'Salary:', self.salary   
+    
+```
+
+- `empCount`变量是一个类变量，它的值将在这个类的所有实例之间共享。你可以在内部类或外部类使用`Employee.empCount`访问。
+- 第一种方法`_ _ init _ _()`方法是一种特殊的方法，被称为类的构造函数或初始化方法，当创建了这个类的实例时就会调用该方法。
+- self代表类的实例，self在定义类的方法时是必须有的，虽然在调用时不必传入相应的参数。
+
+
+
+#### self代表类的实例，而非类
+
+类的方法与普通函数只有一个特别的区别——它们必须有一个额外的第一个参数名称，按照**惯例**它的名称是**self**。
+
+```python
+class Test:
+    '这是Test类的帮助信息'
+    def prt(self):
+        print(self)
+        print(self.__class__)
+        
+t = Test()
+t.prt()
+```
+
+以上实例执行结果为：
+
+```python
+<__main__.Test instance at 0x10d066878>
+__main__.Test
+```
+
+从执行结果可以明显的看出，self代表的是类的实例，代表当前对象的地址，而`self._ _ class _ _`则指向类。
+
+
+
+#### 创建实例对象
