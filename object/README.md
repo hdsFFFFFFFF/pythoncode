@@ -211,3 +211,33 @@ c.myMethod()	#子类调用重写方法
 
   `_ _ private_method`：两个下划线开头，声明该方法为私有方法，不能在类的外部调用。在类的内部调用方式为`self._ _ private_methods`。
 
+python不允许实例化的类访问私有数据，但你可以使用`object._ className _ _ attrName`
+
+(对象名._类名 _ _ 私有属性名)访问属性，参考以下实例;
+
+```python
+#!/usr/bin/env python
+# coding = utf-8
+
+class Hacker:
+    __name = 'hds'
+    
+people = Hacker()
+print people._Hacker__name
+```
+
+执行以上代码，结果如下：
+
+```python
+hds
+```
+
+
+
+
+
+#### 单下划线，双下划线，头尾双下划线说明
+
+- `_ _ foo _ _`：定义的是特殊方法，一般是**系统定义名字**，类似`_ _ init _ _()`之类的。
+- `_ foo`：以单下划线开头的表示的是`protected`类型的变量，即保护类型只能允许其本身与子类进行访问，不能用于`from module import *`。
+- `_ _ foo`：双下划线表示的是私有类型(private)的变量，只能是允许这个类本身进行访问。
