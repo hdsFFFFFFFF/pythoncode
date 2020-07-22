@@ -95,3 +95,30 @@ __main__.Test
 
 
 #### 创建实例对象
+
+实例化类在其他编程语言中一般用关键字new，但是在python中并没有这个关键字，类的实例化类似函数调用方式。
+
+以下使用类的名称Employee来实例化，并通过`_ _ init _ _`方法接收参数。
+
+```python
+'创建Employee类的第一个对象'
+emp1 = Employee('Zara', 2000)
+
+'创建Employee类的第二个参数'
+emp2 = Employee('Manni', 5000)
+```
+
+
+
+#### 访问属性
+
+您可以使用`.`来访问对象的属性。使用如下类的名称访问类变量：
+
+```python
+emp1.displayEmployee()
+emp2.displayEmployee()
+print 'Total Employee %d' % Employee.empCount
+```
+
+
+
