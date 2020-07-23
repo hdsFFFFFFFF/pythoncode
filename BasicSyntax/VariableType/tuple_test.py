@@ -9,6 +9,7 @@ tuple3 = ('love', 1314)
 print tuple
 print tuple[:]
 #print tuple(:) #语法错误
+print tuple[3:8]
 print tuple[5]
 print tuple[3] * 2
 print tuple2[:]
