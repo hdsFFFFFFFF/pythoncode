@@ -72,19 +72,19 @@ total = item_one +	\
 
 #### python命令行参数
 
-1. getopt模块
+1. `getopt`模块
 
-   - python提供getopt模块来获取命令行参数			
+   - python提供`getopt`模块来获取命令行参数			
 
      ```shell
      $ python test.py arg1 arg2 arg3
      ```
 
-   - python也可以使用sys的sys.argv来获取命令行参数：
+   - python也可以使用sys的`sys.argv`来获取命令行参数：
 
-     - [x] sys.argv是命令行参数列表
-     - [x] len(sys.argv)是命令行参数个数
-     - [x] sys.argv[0]表示脚本名
+     - [x] `sys.argv`是命令行参数列表
+     - [x] `len(sys.argv)`是命令行参数个数
+     - [x] `sys.argv[0]`表示脚本名
 
 
 
@@ -92,7 +92,7 @@ total = item_one +	\
 
 1. `from import` 和 `import` 的区别：
 
-   - 例子1：support.py模块
+   - 例子1：`support.py`模块
 
      ```python
      def print_func(par):
@@ -113,7 +113,7 @@ total = item_one +	\
      support.print_func("Runoob")
      ```
 
-     因为print_func( )是support里的函数，如果没有导入support模块，不能直接使用print_func( )实现调用，必须将引入的模块名称当作一个对象，调用这个模块对象下的方法print_func( )，才能实现调用。
+     因为`print_func( )`是support里的函数，如果没有导入support模块，不能直接使用`print_func( )`实现调用，必须将引入的模块名称当作一个对象，调用这个模块对象下的方法`print_func( )`，才能实现调用。
 
      
 
@@ -155,16 +155,16 @@ total = item_one +	\
      print(datetime.datetime.now())
      ```
 
-     是引入整个datetime包
+     是引入整个`datetime`包
 
      ```python
      from datetime import datetime
      print(datetime.now())
      ```
 
-     是只引入datetime包里的datetime类。
+     是只引入`datetime`包里的`datetime`类。
 
-     所以前者(imjport)是datetime这个包可见，后者(from import)是datetime.datetime这个类可见。
+     所以前者`(imjport)`是`datetime`这个包可见，后者(from import)是`datetime.datetime`这个类可见。
 
 
 
@@ -177,7 +177,7 @@ python有5个标准的数据类型
    python支持4种不同的数字类型
 
    - int (有符号整型) `10`
-   - long (长整型，也可以代表八进制和十六进制) `5192436L` ,python 2.x中
+   - long (长整型，也可以代表八进制和十六进制) `5192436L` ,`python 2.x`中
    - float (浮点型) `15.20`
    - complex (复数)  `3.14J`
 
@@ -213,7 +213,7 @@ python的字符串列表有2种取值顺序：
 
 ![o99aU](/img/o99aU.png)
 
-python列表截取可以接收第3个参数，参数的作用是截取的步长。[1:4:2]表示在索引1到索引4的位置间，设置步长为2(间隔一个位置)来截取字符串。
+python列表截取可以接收第3个参数，参数的作用是截取的步长。`[1:4:2]`表示在索引1到索引4的位置间，设置步长为2(间隔一个位置)来截取字符串。
 
 ![python_list_slice_2](/img/python_list_slice_2.png)
 
@@ -254,25 +254,25 @@ list(列表)是python中最频繁的数据类型。
 
 以下几个内置的函数可以执行数据类型之间的转换。这些函数返回一个新的对象，表示转换的值。
 
-| 函数                 | 描述                                                 |
-| -------------------- | ---------------------------------------------------- |
-| int(x[,base])        | 将x转换为一个整数                                    |
-| long(x[,base])       | 将x转换为一个长整数                                  |
-| float(x)             | 将x转换为一个浮点数                                  |
-| complex(real[,imag]) | 创建一个复数                                         |
-| str(x)               | 将对象x转换为字符串                                  |
-| repr(x)              | 将对象x转换为表达式字符串                            |
-| eval(str)            | 用来计算在字符串中的有效python表达式，并返回一个对象 |
-| tuple(s)             | 将序列s转换为一个元组                                |
-| list(s)              | 将序列s转换为一个列表                                |
-| set(s)               | 转换为可变集合                                       |
-| dict(d)              | 创建一个字典。d必须是一个序列(key, value)元组        |
-| frozenset(s)         | 转换为不可变集合                                     |
-| chr(x)               | 将一个整数转换为一个字符                             |
-| unichr(x)            | 将一个整数转换为一个Unicode字符                      |
-| ord(x)               | 将一个字符转换为它的整数值                           |
-| hex(x)               | 将一个整数转换为一个十六进制字符串                   |
-| oct(x)               | 将一个整数转换为一个八进制字符串                     |
+| 函数                   | 描述                                                 |
+| ---------------------- | ---------------------------------------------------- |
+| int(x[,base])          | 将x转换为一个整数                                    |
+| long(x[,base])         | 将x转换为一个长整数                                  |
+| float(x)               | 将x转换为一个浮点数                                  |
+| `complex(real[,imag])` | 创建一个复数                                         |
+| `str(x)`               | 将对象x转换为字符串                                  |
+| `repr(x)`              | 将对象x转换为表达式字符串                            |
+| `eval(str)`            | 用来计算在字符串中的有效python表达式，并返回一个对象 |
+| tuple(s)               | 将序列s转换为一个元组                                |
+| list(s)                | 将序列s转换为一个列表                                |
+| set(s)                 | 转换为可变集合                                       |
+| `dict(d)`              | 创建一个字典。d必须是一个序列(key, value)元组        |
+| `frozenset(s)`         | 转换为不可变集合                                     |
+| `chr(x)`               | 将一个整数转换为一个字符                             |
+| `unichr(x)`            | 将一个整数转换为一个Unicode字符                      |
+| `ord(x)`               | 将一个字符转换为它的整数值                           |
+| hex(x)                 | 将一个整数转换为一个十六进制字符串                   |
+| `oct(x)`               | 将一个整数转换为一个八进制字符串                     |
 
 
 
@@ -450,9 +450,17 @@ b'\xe4\xb8\xad\xe6\x96\x87'
   b'\xe4\xb8\xad\xe6\x96\x87'		#python3中需要b前缀标识这是字节流类型
   ```
 
-  
 
 
+
+**一点小知识，关于`unicode`**
+
+1. **硬盘**中一般编码都是`utf-8`。
+2. **内存**中采用`unicode`编码方式。
+
+python中的`str`其实就是读取`unicode`，`str`的内存格式就是`unicode`，所以理解为`str`就是`unicode`，`unicode`就是`str`。
+
+另外，`utf-8`与`unicode`编码中的字符部分的编码方式是一样的，所以英文显示没有区别。
 
 
 
