@@ -16,3 +16,9 @@ print str.split('a', 1)  #以空格为分隔符，分隔成两个
 
 str = 'l i n u x'
 print str.split()
+
+str = '1 2 3 4 5'
+#用a,b,c,d,e分别接收1，2，3，4，5
+(a, b, c, d, e) = str.split()
+
+print a, b, c, d, e
