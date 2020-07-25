@@ -21,6 +21,31 @@ int()有两个需要注意的地方：
 
 
 
+#### float()
+
+**syntax**:float([x])
+
+**arguments**:
+
+- x：整数或字符串
+
+**return**：返回一个浮点数
+
+实例：
+
+```python
+>>>float(1)
+1.0
+>>> float(112)
+112.0
+>>> float(-123.6)
+-123.6
+>>> float('123')     # 字符串
+123.0
+```
+
+
+
 #### split()
 
 **syntax**：`str.split(str = ' ', num = string.count(str))`
