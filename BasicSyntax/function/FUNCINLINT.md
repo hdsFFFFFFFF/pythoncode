@@ -1,5 +1,52 @@
 ### python内置函数
 
+#### `staticmethod()`函数
+
+1. @符号
+
+   **@**符号用作**函数的修饰符**，可以在**模块或者类的定义层内**对函数进行修饰，出现在函数定义的前一行。
+
+   一个修饰符就是一个函数，它将**被修饰的函数作为参数**，并返回修饰后的同名函数或其他可调用的东西(如果返回不是一个可调用的对象那么会报错)。
+
+2. `staticmethod()`
+
+   `staticmethod`返回函数的静态方法。该方法不强制要求传递参数，如下声明一个静态方法：
+
+   ```python
+   class C(object):
+       @staticmethod
+       def f(arg1, arg2, ...):
+           ...
+   ```
+
+   以上实例声明了静态方法f，从而可以实现实例化使用`C().f()`，当让也可以不实例化调用该方法`C.f()`。
+
+   实例：
+
+   ```python
+   #!/usr/bin/env python
+   # coding=utf-8
+   
+   class C(object):
+       @staticmethod
+       def f():
+           print('runoob')
+           
+   C.f()	#静态方法无需实例化
+   
+   cobj = C()
+   cobj.f()	#也可以实例化后调用
+   ```
+
+   以上实例输出结果为
+
+   ```python
+   runoob
+   runoob
+   ```
+
+   
+
 #### int()
 
 **用法**：`int(x, base =10)`
